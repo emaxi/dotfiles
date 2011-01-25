@@ -1,16 +1,21 @@
 #System
-#alias tc='top -o cpu'
-#alias tm='top -o vsize'
+alias tc='top -o cpu'
+alias tm='top -o vsize'
 
 #alias l='ls -lsak'
 #alias la='ls -la'
-alias l='ls'
+alias l='ls -l'
 alias la='ls -lisa'
 
+alias reload='source ~/.bash_profile'
+
 alias d="cd"
+alias cdd="cd -"
 alias ..='cd ..'
+alias cdp='cd ~/projects/own/panparaiso'
 
 alias c='clear'
+alias hist='history'
 
 alias goodbye="osascript -e 'tell application \"System Events\"' -e 'shut down' -e 'end tell'"
 
@@ -37,3 +42,7 @@ alias gln="git log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short"
 alias r="rake"
 alias a="autotest"
 alias af="autotest -f"
+
+alias rmig='rake db:migrate'
+alias rca='rake db:create:all'
+alias rda='rake db:drop:all'
