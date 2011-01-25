@@ -1,0 +1,39 @@
+#System
+#alias tc='top -o cpu'
+#alias tm='top -o vsize'
+
+#alias l='ls -lsak'
+#alias la='ls -la'
+alias l='ls'
+alias la='ls -lisa'
+
+alias d="cd"
+alias ..='cd ..'
+
+alias c='clear'
+
+alias goodbye="osascript -e 'tell application \"System Events\"' -e 'shut down' -e 'end tell'"
+
+
+# Editor
+#
+alias v="mvim -v"
+
+# Git
+alias g="git status"
+alias gb="git branch"
+alias ga="git add ."
+alias gc="git commit"
+alias gp="git push"
+alias gd="git diff"
+alias go="git checkout"
+alias gt="git tag"
+alias gx="gitx ."
+alias gl="git log"
+# Git log nice
+alias gln="git log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short"
+
+# Rails
+alias r="rake"
+alias a="autotest"
+alias af="autotest -f"
