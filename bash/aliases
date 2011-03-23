@@ -13,6 +13,7 @@ alias d="cd"
 alias cdd="cd -"
 alias ..='cd ..'
 alias cdp='cd ~/projects/own/panparaiso'
+alias cdw='cd ~/work/dreepi/whitesnake'
 
 alias c='clear'
 alias hist='history'
@@ -28,6 +29,7 @@ alias v="mvim -v"
 alias g="git status"
 alias gb="git branch"
 alias ga="git add ."
+alias gadd="git add"
 alias gc="git commit"
 alias gp="git push"
 alias gd="git diff"
@@ -39,10 +41,14 @@ alias gl="git log"
 alias gln="git log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short"
 
 # Rails
-alias r="rake"
+alias r="rails"
+alias ra="rake"
 alias a="autotest"
 alias af="autotest -f"
 
 alias rmig='rake db:migrate'
 alias rca='rake db:create:all'
 alias rda='rake db:drop:all'
+
+# General
+alias ip='curl ifconfig.me'

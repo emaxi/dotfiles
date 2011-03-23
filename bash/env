@@ -1,5 +1,6 @@
 export GEM_HOME='/usr/local/Cellar/gems/1.8'
 export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:$PATH
+export PATH=/usr/local/sbin:$PATH
 
 export EDITOR="vim "
 
