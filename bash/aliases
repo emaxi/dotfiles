@@ -49,6 +49,7 @@ alias af="autotest -f"
 alias rmig='rake db:migrate'
 alias rca='rake db:create:all'
 alias rda='rake db:drop:all'
+alias rdball='rake db:drop:all && rake db:create:all && rake db:migrate && rake db:seed && rake db:test:prepare'
 
 # General
 alias ip='curl ifconfig.me'
