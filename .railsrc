@@ -1,0 +1,61 @@
+# .railsrc for Rails 3, encoding: utf-8
+#   see http://rbjl.net/49-railsrc-rails-console-snippets
+
+# ActiveReocord's SQL queries
+ActiveRecord::Base.logger     = Logger.new STDOUT
+ActiveRecord::Base.clear_reloadable_connections!
+
+#Plain SQL
+def sql(query)
+  ActiveRecord::Base.connection.select_all(query)
+end
+
+
+# ActionController logger
+ActionController::Base.logger = Logger.new STDOUT
+
+# Named route
+include Rails.application.routes.url_helpers
+default_url_options[:host] = Rails.application.class.parent_name.downcase
+
+
+# ActionViews helpers
+#include ActionView::Helpers           # All Rails helpers
+include ApplicationController._helpers # Your own helpers
+#
+# unfortunately that breaks some functionality (e.g. the named route helpers above)
+#  so, look at actionpack/lib/action_view/helpers.rb and choose the helpers you need
+#  (and which don't break anything), e.g.
+include ActionView::Helpers::DebugHelper
+include ActionView::Helpers::NumberHelper
+include ActionView::Helpers::RawOutputHelper
+include ActionView::Helpers::SanitizeHelper
+include ActionView::Helpers::TagHelper
+include ActionView::Helpers::TextHelper
+include ActionView::Helpers::TranslationHelper
+
+# Irb version
+app_name = Rails.application.class.parent_name.downcase
+app_env  = Rails.env[0...3]
+IRB.conf[:PROMPT] ||= {}
+IRB.conf[:PROMPT][:RAILS] = {
+  :PROMPT_I => "#{ app_name }(#{ app_env })> ",
+  :PROMPT_N => "#{ app_name }(#{ app_env })| ",
+  :PROMPT_C => "#{ app_name }(#{ app_env })| ",
+  :PROMPT_S => "#{ app_name }(#{ app_env })%l ",
+  :RETURN => "=> %s\n",
+  :AUTO_INDENT => true,
+}
+IRB.conf[:PROMPT_MODE] = :RAILS
+
+# Console History
+Ripl.config[:history] = File.join Dir.pwd, '.console_history'
+
+
+# Initialize authlogic
+if defined? Authlogic
+  Authlogic::Session::Base.controller =
+      Authlogic::ControllerAdapters::RailsAdapter.new(self)
+end
+
+# Based on J-_-L
