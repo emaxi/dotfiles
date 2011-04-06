@@ -30,6 +30,7 @@ alias g="git status"
 alias gb="git branch"
 alias ga="git add ."
 alias gadd="git add"
+alias gf="git fetch"
 alias gc="git commit"
 alias gp="git push"
 alias gd="git diff"
@@ -53,3 +54,5 @@ alias rdball='rake db:drop:all && rake db:create:all && rake db:migrate && rake 
 
 # General
 alias ip='curl ifconfig.me'
+
+alias msql='/usr/local/mysql/libexec/mysqld'
