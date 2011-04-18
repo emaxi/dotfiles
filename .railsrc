@@ -48,4 +48,9 @@ IRB.conf[:PROMPT][:RAILS] = {
 }
 IRB.conf[:PROMPT_MODE] = :RAILS
 
+# Helper method for show routes *faster than rake routes*
+def r
+  puts Rails.application.routes.routes
+end
+
 # Based on J-_-L
