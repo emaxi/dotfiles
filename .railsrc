@@ -48,14 +48,4 @@ IRB.conf[:PROMPT][:RAILS] = {
 }
 IRB.conf[:PROMPT_MODE] = :RAILS
 
-# Console History
-Ripl.config[:history] = File.join Dir.pwd, '.console_history'
-
-
-# Initialize authlogic
-if defined? Authlogic
-  Authlogic::Session::Base.controller =
-      Authlogic::ControllerAdapters::RailsAdapter.new(self)
-end
-
 # Based on J-_-L
