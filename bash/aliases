@@ -56,3 +56,9 @@ alias rdball='rake db:drop:all && rake db:create:all && rake db:migrate && rake 
 alias ip='curl ifconfig.me'
 
 alias msql='/usr/local/mysql/libexec/mysqld'
+
+alias safari='/Applications/Safari.app/Contents/MacOS/Safari https://mail.google.com/mail/'
+
+# Rails haml/html converting. Not working because string escaping
+# alias railshtml2haml = 'find . -name '*erb' | xargs ruby -e 'ARGV.each { |i| puts "html2haml -r #{i} #{i.sub(/erb$/,"haml")};rm #{i}"}' | bash'
+
