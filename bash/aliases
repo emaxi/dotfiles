@@ -1,59 +1,62 @@
 #System
-alias tc='top -o cpu'
-alias tm='top -o vsize'
+#alias tc='top -o cpu'
+#alias tm='top -o vsize'
 
 #alias l='ls -lsak'
 #alias la='ls -la'
-alias l='ls -l'
-alias la='ls -lisa'
+#alias l='ls -l'
+#alias la='ls -lisa'
 
-alias reload='source ~/.bash_profile'
+#alias reload='source ~/.bash_profile'
 
-alias d="cd"
-alias cdd="cd -"
-alias ..='cd ..'
-alias cdp='cd ~/projects/own/panparaiso'
+#alias d="cd"
+#alias cdd="cd -"
+#alias ..='cd ..'
+#alias cdp='cd ~/projects/own/panparaiso'
 alias cdw='cd ~/work/dreepi/whitesnake'
+alias cda='cd ~/work/dreepi/albert'
+alias cdc='cd ~/work/caei/caei'
 
-alias c='clear'
-alias hist='history'
+#alias c='clear'
+#alias hist='history'
 
 alias goodbye="osascript -e 'tell application \"System Events\"' -e 'shut down' -e 'end tell'"
 
 
 # Editor
 #
-alias v="mvim -v"
+alias vi="mvim -v"
 
 # Git
-alias g="git status"
-alias gb="git branch"
-alias ga="git add ."
-alias gadd="git add"
-alias gf="git fetch"
-alias gc="git commit"
-alias gp="git push"
-alias gd="git diff"
-alias go="git checkout"
-alias gt="git tag"
-alias gx="gitx ."
-alias gl="git log"
+#alias g="git status"
+#alias gb="git branch"
+#alias ga="git add ."
+#alias gadd="git add"
+#alias gf="git fetch"
+#alias gc="git commit"
+#alias gp="git push"
+#alias gd="git diff"
+#alias go="git checkout"
+#alias gt="git tag"
+#alias gx="gitx ."
+#alias gl="git log"
 # Git log nice
 alias gln="git log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short"
 
 # Rails
-alias r="rails"
-alias ra="rake"
-alias a="autotest"
-alias af="autotest -f"
-
-alias rmig='rake db:migrate'
-alias rca='rake db:create:all'
-alias rda='rake db:drop:all'
-alias rdball='rake db:drop:all && rake db:create:all && rake db:migrate && rake db:seed && rake db:test:prepare'
+#alias r="rails"
+#alias ra="rake"
+#alias a="autotest"
+#alias af="autotest -f"
+#
+#alias rmig='rake db:migrate'
+#alias rca='rake db:create:all'
+#alias rda='rake db:drop:all'
+#alias rdball='rake db:drop:all && rake db:create:all && rake db:migrate && rake db:seed && rake db:test:prepare'
 
 # General
-alias ip='curl ifconfig.me'
+#alias ip='curl ifconfig.me'
+alias bake='bundle exec rake'
 
 alias msql='/usr/local/mysql/libexec/mysqld'
 
