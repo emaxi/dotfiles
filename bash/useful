@@ -1,2 +1,5 @@
 # Searh and replace
 find . -type f -exec perl -p -i -e "s/SEARCH_REGEX/REPLACEMENT/g" {} \;
+
+# flush cache
+dscacheutil -flushcache
