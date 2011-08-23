@@ -3,3 +3,9 @@ find . -type f -exec perl -p -i -e "s/SEARCH_REGEX/REPLACEMENT/g" {} \;
 
 # flush cache
 dscacheutil -flushcache
+
+# Disable indexing
+sudo mdutil -a -i off
+
+# Enable indexing
+sudo mdutil -a -i on
