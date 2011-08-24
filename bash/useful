@@ -9,3 +9,6 @@ sudo mdutil -a -i off
 
 # Enable indexing
 sudo mdutil -a -i on
+
+#Execute posgres
+/usr/local/Cellar/postgresql/9.0.3/bin/postgres -D /usr/local/var/postgres -r /usr/local/var/postgres/server.log
