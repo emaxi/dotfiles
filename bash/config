@@ -36,4 +36,4 @@ bakcyn='\e[46m'   # Cyan
 bakwht='\e[47m'   # White
 txtrst='\e[0m'    # Text Reset
 
-PS1='\[\e[1;32m\][\u \W]\[\e[0m\] \[\e[1;33m\]$(__git_ps1 "(%s)")\[\e[0,0m\] \$ '
+PS1='\n\[\033[0;35m\]\u\[\033[0;32m\]\w\[\033[0m\]$(__git_ps1)\n\$\[\033[0m\] '

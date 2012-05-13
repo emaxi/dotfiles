@@ -28,9 +28,9 @@ alias goodbye="osascript -e 'tell application \"System Events\"' -e 'shut down' 
 alias vi="mvim -v"
 
 # Git
-#alias g="git status"
+alias g="git status"
 #alias gb="git branch"
-#alias ga="git add ."
+alias ga="git add ."
 #alias gadd="git add"
 #alias gf="git fetch"
 #alias gc="git commit"
@@ -44,8 +44,8 @@ alias vi="mvim -v"
 alias gln="git log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short"
 
 # Rails
-#alias r="rails"
-#alias ra="rake"
+alias r="rails"
+alias rk="rake"
 #alias a="autotest"
 #alias af="autotest -f"
 #
@@ -56,12 +56,12 @@ alias gln="git log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short"
 
 # General
 #alias ip='curl ifconfig.me'
-alias bake='bundle exec rake'
-
-alias msql='/usr/local/mysql/libexec/mysqld'
+alias bx='bundle exec'
 
 alias safari='/Applications/Safari.app/Contents/MacOS/Safari https://mail.google.com/mail/'
 
 # Rails haml/html converting. Not working because string escaping
 # alias railshtml2haml = 'find . -name '*erb' | xargs ruby -e 'ARGV.each { |i| puts "html2haml -r #{i} #{i.sub(/erb$/,"haml")};rm #{i}"}' | bash'
 
+alias up_mysql='/usr/local/Cellar/mysql/5.5.10/bin/mysqld_safe'
+alias up_postgres='/usr/local/Cellar/postgresql/9.0.3/bin/postgres -D /usr/local/var/postgres -r /usr/local/var/postgres/server.log'

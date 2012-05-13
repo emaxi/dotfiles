@@ -1,16 +1,6 @@
 # .railsrc for Rails 3, encoding: utf-8
 #   see http://rbjl.net/49-railsrc-rails-console-snippets
 
-# ActiveReocord's SQL queries
-ActiveRecord::Base.logger     = Logger.new STDOUT
-ActiveRecord::Base.clear_reloadable_connections!
-
-#Plain SQL
-def sql(query)
-  ActiveRecord::Base.connection.select_all(query)
-end
-
-
 # ActionController logger
 ActionController::Base.logger = Logger.new STDOUT
 
@@ -28,7 +18,7 @@ include ApplicationController._helpers # Your own helpers
 #  (and which don't break anything), e.g.
 include ActionView::Helpers::DebugHelper
 include ActionView::Helpers::NumberHelper
-include ActionView::Helpers::RawOutputHelper
+#include ActionView::Helpers::RawOutputHelper
 include ActionView::Helpers::SanitizeHelper
 include ActionView::Helpers::TagHelper
 include ActionView::Helpers::TextHelper
@@ -47,10 +37,5 @@ IRB.conf[:PROMPT][:RAILS] = {
   :AUTO_INDENT => true,
 }
 IRB.conf[:PROMPT_MODE] = :RAILS
-
-# Helper method for show routes *faster than rake routes*
-def r
-  puts Rails.application.routes.routes
-end
 
 # Based on J-_-L
