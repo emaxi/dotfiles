@@ -11,13 +11,9 @@
 
 #alias d="cd"
 #alias cdd="cd -"
-#alias ..='cd ..'
-#alias cdp='cd ~/projects/own/panparaiso'
-alias cdw='cd ~/work/dreepi/whitesnake'
-alias cda='cd ~/work/dreepi/albert'
-alias cdc='cd ~/work/caei/caei'
+alias ..='cd ..'
 
-#alias c='clear'
+alias c='clear'
 #alias hist='history'
 
 alias goodbye="osascript -e 'tell application \"System Events\"' -e 'shut down' -e 'end tell'"
@@ -29,17 +25,17 @@ alias vi="mvim -v"
 
 # Git
 alias g="git status"
-#alias gb="git branch"
+alias gb="git branch"
 alias ga="git add ."
-#alias gadd="git add"
+alias gaa="git add -A"
 #alias gf="git fetch"
-#alias gc="git commit"
-#alias gp="git push"
-#alias gd="git diff"
-#alias go="git checkout"
-#alias gt="git tag"
-#alias gx="gitx ."
-#alias gl="git log"
+alias gc="git commit"
+alias gp="git push"
+alias gd="git diff"
+alias gdc="git diff --cached"
+alias go="git checkout"
+alias gt="git tag"
+alias gl="git log"
 # Git log nice
 alias gln="git log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short"
 
@@ -56,7 +52,8 @@ alias rk="rake"
 
 # General
 #alias ip='curl ifconfig.me'
-alias bx='bundle exec'
+alias be='bundle exec'
+alias b='bundle install'
 
 alias safari='/Applications/Safari.app/Contents/MacOS/Safari https://mail.google.com/mail/'
 

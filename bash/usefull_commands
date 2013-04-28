@@ -1,0 +1,4 @@
+#Managing local domains
+sudo dscl localhost -create /Local/Default/Hosts/mydev.local IPAddress 127.0.0.1
+sudo dscl localhost -delete /Local/Default/Hosts/mydev.local
+sudo dscl localhost -list /Local/Default/Hosts IPAddress
