@@ -5,3 +5,4 @@
 . ~/bin/dotfiles/bash/functions
 . ~/bin/dotfiles/bash/z.sh
 . ~/bin/dotfiles/bash/bash_completion_tmux.sh
+. ~/bin/dotfiles/bash/git-completion.bash
