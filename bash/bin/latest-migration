@@ -1,0 +1,2 @@
+#!/bin/sh
+vi db/migrate/`ls db/migrate | tail -n 1`
