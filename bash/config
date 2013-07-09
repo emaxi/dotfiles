@@ -7,3 +7,15 @@ __git_ps1 ()
 }
 
 PS1='\n\[\033[0;35m\]\u\[\033[0;32m\]\w\[\033[0m\]$(__git_ps1)\n\$\[\033[0m\] '
+
+
+export HISTFILESIZE=10000
+export HISTSIZE=10000
+
+#Multiple shells may overwrite each others' history.
+#This fixes that.
+shopt -s histappend
+
+#Make shells write to history immediately.
+#Normally they write only on exit.
+export PROMPT_COMMAND='history -a'
