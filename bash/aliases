@@ -17,6 +17,7 @@ alias c='clear'
 #alias hist='history'
 
 alias goodbye="osascript -e 'tell application \"System Events\"' -e 'shut down' -e 'end tell'"
+alias getmyip='dig +short myip.opendns.com @resolver1.opendns.com'
 
 
 # Editor
