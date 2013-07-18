@@ -39,6 +39,7 @@ alias gt="git tag"
 alias gl="git log"
 # Git log nice
 alias gln="git log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short"
+alias gpo="git pull origin"
 
 # Rails
 alias r="rails"
