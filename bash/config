@@ -35,3 +35,6 @@ case "$TERM" in
 	xterm-256color) color_prompt=yes;;
 esac
 #if [ "$color_prompt" = yes ]; then
+
+# Allow <C-s> to pass through to shell and programs
+stty -ixon -ixoff
