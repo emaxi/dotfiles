@@ -68,3 +68,5 @@ alias up_mysql='/usr/local/Cellar/mysql/5.5.10/bin/mysqld_safe'
 alias up_postgres='/usr/local/Cellar/postgresql/9.0.3/bin/postgres -D /usr/local/var/postgres -r /usr/local/var/postgres/server.log'
 
 alias speedtest='wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip'
+
+alias p='open ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/'
