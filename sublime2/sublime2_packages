@@ -1,5 +1,8 @@
+AdvancedNewFile
 AllAutocomplete
+ApplySintax
 Backbone
+CaseConversion
 Sass
 SideBarEnhancements
 Coffescript
@@ -11,3 +14,7 @@ Haml
 Rspec
 ApplySintax
 Git Gutter
+Emmet
+
+View
+https://github.com/wbond/sublime_package_control/wiki/Sublime-Text-3-Compatible-Packages
