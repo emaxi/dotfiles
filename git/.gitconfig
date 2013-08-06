@@ -32,6 +32,7 @@
 	l = log --oneline
 	#############
 	a = add .
+	patch = add --patch
 	#############
   co = checkout
 	cob = checkout -b
@@ -58,12 +59,10 @@
 	pb = pull --rebase
 	pbo = pull --rebase origin
 
-	# Create alias on the fly
 	alias = "!sh -c '[ $# = 2 ] && git config --global alias.\"$1\" \"$2\" && exit 0 || echo \"usage: git alias <new alias> <original command>\" >&2 && exit 1' -"
-
-	# List aliases
 	aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
 
+  searchcommits = "!f() { query=\"$1\"; shift; git log -S\"$query\" \"$@\"; }; f \"$@\""
   # Search for a given string in all patches and print commit messages
   # example: search for any commit that adds or removes string "foobar"
   #     git searchcommits foobar
@@ -71,7 +70,9 @@
   #     git searchcommits foobar src/lib
   # example: search commits for "foobar", print full diff of commit with 1 line context
   #     git searchcommits foobar --pickaxe-all -U1 src/lib
-  searchcommits = "!f() { query=\"$1\"; shift; git log -S\"$query\" \"$@\"; }; f \"$@\""
+
+	sha1 = !sh -c 'git rev-parse ${1-`echo HEAD`}' -
+	# sha1 of the current branch's HEAD
  
 [color]
 	ui = true
