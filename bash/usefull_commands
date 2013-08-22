@@ -6,3 +6,5 @@ sudo dscl localhost -list /Local/Default/Hosts IPAddress
 wget -rkp -l3 -np -nH --cut-dirs=1  http://example.com
 
 cat ~/.ssh/id_rsa.pub | ssh user@ip 'cat >> ~/.ssh/authorized_keys'
+
+sed -i 's/THIS/THAT/g' /path/to/files
