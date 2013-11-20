@@ -16,3 +16,7 @@ pull() {
 push() {
 	  git push origin $(get_git_branch_string)
 }
+
+function md() {
+	mkdir $1 && cd $1
+} 
