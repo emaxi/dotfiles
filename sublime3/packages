@@ -1,9 +1,11 @@
 AdvancedNewFile
+Alignment
 AllAutocomplete
 ApplySintax
 Backbone
 CaseConversion
 Coffescript
+ColorPick
 Emmet
 Git Gutter
 GitHub Tools
@@ -13,7 +15,10 @@ jQuery
 Less
 Sass
 Rspec
+ruby-slim.tmbundle
 SideBarEnhancements
 SublimeREPL
 View
+TrailingSpaces
+
 https://github.com/wbond/sublime_package_control/wiki/Sublime-Text-3-Compatible-Packages
