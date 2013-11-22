@@ -3,18 +3,17 @@ AllAutocomplete
 ApplySintax
 Backbone
 CaseConversion
-Sass
-SideBarEnhancements
 Coffescript
-jQuery
-Html Mustache
-GitHub Tools
-Less
-Haml
-Rspec
-ApplySintax
-Git Gutter
 Emmet
-
+Git Gutter
+GitHub Tools
+Haml
+Html Mustache
+jQuery
+Less
+Sass
+Rspec
+SideBarEnhancements
+SublimeREPL
 View
 https://github.com/wbond/sublime_package_control/wiki/Sublime-Text-3-Compatible-Packages
