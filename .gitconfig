@@ -1,0 +1,36 @@
+ds = diff --staged      # git ds - diff your staged changes == review before committing.
+st = status -sb         # smarter status - include tag and branch info
+fup = log --since '1 day ago' --oneline --author <YOUR_EMAIL>  # I know what you did yesterday - great for follow-ups
+ls = log --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=short  # pretty one-line log with tags, branches and authors
+lsv = log --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=short --numstat    # a verbose ls, shows changed files too
+
+# some resets without explanation
+r = reset
+r1 = reset HEAD^
+r2 = reset HEAD^^
+rh = reset --hard
+rh1 = reset HEAD^ --hard
+rh2 = reset HEAD^^ --hard
+
+# basic shortcuts
+cp = cherry-pick
+cl = clone
+ci = commit
+co = checkout
+br = branch 
+diff = diff --word-diff
+dc = diff --cached
+
+# stash shortcuts
+sl = stash list
+sa = stash apply
+ss = stash save
+
+# log related - thanks to @mwd410
+l = log 
+lh = log --graph
+la = !git lh --date-order --all 2> /dev/null
+lb = log --graph --simplify-by-decoration
+lba = !git lb --all 
+h = !git --no-pager log --graph -n 15
+a = !git --no-pager la -n 15
