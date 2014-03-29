@@ -70,3 +70,5 @@ alias up_postgres='/usr/local/Cellar/postgresql/9.0.3/bin/postgres -D /usr/local
 alias speedtest='wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip'
 
 alias p='open ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/'
+
+alias last_migration='ls db/migrate/* | tail -n1 | xargs $EDITOR'

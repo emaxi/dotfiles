@@ -23,7 +23,7 @@ export PROMPT_COMMAND='history -a'
 #Set up text editing/viewing.
 export LANG=en_US.utf-8
 export CLICOLOR=1 #Colorizes output of ls and others.
-export EDITOR=vi
+export EDITOR=vim
 export VISUAL=$EDITOR
 export PAGER=less
 
