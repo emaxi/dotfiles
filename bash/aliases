@@ -24,25 +24,6 @@ alias getmyip='dig +short myip.opendns.com @resolver1.opendns.com'
 #
 alias vi="mvim -v"
 
-# Git
-alias g="git status"
-alias gb="git branch"
-alias ga="git add ."
-alias gaa="git add -A"
-#alias gf="git fetch"
-alias gc="git commit"
-alias gp="git push"
-alias gr="git reset"
-alias gd="git diff"
-alias gdc="git diff --cached"
-alias gco="git checkout"
-alias gt="git tag"
-alias gl="git log"
-# Git log nice
-alias gln="git log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short"
-alias gplo="git pull origin"
-alias gpo="git push origin"
-
 # Rails
 alias r="rails"
 alias rk="rake"
@@ -71,4 +52,4 @@ alias speedtest='wget -O /dev/null http://speedtest.wdc01.softlayer.com/download
 
 alias p='open ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/'
 
-alias last_migration='ls db/migrate/* | tail -n1 | xargs $EDITOR'
+alias last_migration='ls db/migrate/* | tail -n1'
