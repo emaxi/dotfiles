@@ -7,10 +7,9 @@
 #alias l='ls -l'
 #alias la='ls -lisa'
 
-#alias reload='source ~/.bash_profile'
+alias reload='source ~/.bash_profile'
 
-#alias d="cd"
-#alias cdd="cd -"
+alias cdd="cd -"
 alias ..='cd ..'
 
 alias c='clear'
@@ -27,8 +26,6 @@ alias vi="mvim -v"
 # Rails
 alias r="rails"
 alias rk="rake"
-#alias a="autotest"
-#alias af="autotest -f"
 #
 #alias rmig='rake db:migrate'
 #alias rca='rake db:create:all'
@@ -45,11 +42,13 @@ alias safari='/Applications/Safari.app/Contents/MacOS/Safari https://mail.google
 # Rails haml/html converting. Not working because string escaping
 # alias railshtml2haml = 'find . -name '*erb' | xargs ruby -e 'ARGV.each { |i| puts "html2haml -r #{i} #{i.sub(/erb$/,"haml")};rm #{i}"}' | bash'
 
-alias up_mysql='/usr/local/Cellar/mysql/5.5.10/bin/mysqld_safe'
-alias up_postgres='/usr/local/Cellar/postgresql/9.0.3/bin/postgres -D /usr/local/var/postgres -r /usr/local/var/postgres/server.log'
+# alias up_mysql='/usr/local/Cellar/mysql/5.5.10/bin/mysqld_safe'
+# alias up_postgres='/usr/local/Cellar/postgresql/9.0.3/bin/postgres -D /usr/local/var/postgres -r /usr/local/var/postgres/server.log'
 
 alias speedtest='wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip'
 
-alias p='open ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/'
+alias subl_packages='open ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/'
 
 alias last_migration='ls db/migrate/* | tail -n1'
+
+#history | awk '{CMD[$2]++;count++;}END { for (a in CMD)print CMD[a] " " CMD[a]/count*100 "% " a;}' | grep -v "./" | column -c3 -s " " -t | sort -nr | nl |  head -n1
