@@ -6,8 +6,25 @@ __git_ps1 ()
     fi
 }
 
-PS1='\n\[\033[0;35m\]\u\[\033[0;32m\]\w\[\033[0m\]$(__git_ps1)\n\$\[\033[0m\] '
 
+#export PS1="\[$Blue\][ \t ] \[${BOLD}${BIRed}\]\u \[$Cyan\]in \[$GREEN\]\w\[$Cyan\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$PURPLE\]\$(parse_git_branch)\[$Green\]\n → \[$RESET\]"
+#export PS2="\[$WHITE\]\[$RESET\]"
+
+# Parse git for clean dir
+function parse_git_dirty {
+[[ "$(git status 2> /dev/null | tail -n1)" != "nothing to commit (working directory clean)" ]] && echo "*"
+}
+
+# To display git branch
+function parse_git_branch {
+git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
+}
+ 
+if [[ ${EUID} == 0 ]] ; then
+PS1='\[\033[01;31m\]\u@\h \[\033[01;34m\]\w\[\033[01;35m\]$(parse_git_branch)\[\033[01;34m\] \$ \[\033[00m\]'
+else
+PS1='\[\033[01;00m\]\w\[\033[00;33m\]$(parse_git_branch)\[\033[00m\] \$ '
+fi
 
 export HISTFILESIZE=10000
 export HISTSIZE=10000
@@ -26,15 +43,6 @@ export CLICOLOR=1 #Colorizes output of ls and others.
 export EDITOR=vim
 export VISUAL=$EDITOR
 export PAGER=less
-
-
-#The command line prompt.
-case "$TERM" in
-	xterm) color_prompt=yes;;
-	xterm-color) color_prompt=yes;;
-	xterm-256color) color_prompt=yes;;
-esac
-#if [ "$color_prompt" = yes ]; then
 
 # Allow <C-s> to pass through to shell and programs
 stty -ixon -ixoff

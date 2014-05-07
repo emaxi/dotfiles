@@ -2,10 +2,10 @@
 #alias tc='top -o cpu'
 #alias tm='top -o vsize'
 
-#alias l='ls -lsak'
-#alias la='ls -la'
-#alias l='ls -l'
-#alias la='ls -lisa'
+alias l='ls -lsak'
+alias la='ls -la'
+alias l='ls -l'
+alias la='ls -lisa'
 
 alias reload='source ~/.bash_profile'
 
@@ -13,27 +13,20 @@ alias cdd="cd -"
 alias ..='cd ..'
 
 alias c='clear'
-#alias hist='history'
 
 alias goodbye="osascript -e 'tell application \"System Events\"' -e 'shut down' -e 'end tell'"
 alias getmyip='dig +short myip.opendns.com @resolver1.opendns.com'
-
 
 # Editor
 #
 alias vi="mvim -v"
 
-# Rails
-alias r="rails"
-alias rk="rake"
+# Git
 #
-#alias rmig='rake db:migrate'
-#alias rca='rake db:create:all'
-#alias rda='rake db:drop:all'
-#alias rdball='rake db:drop:all && rake db:create:all && rake db:migrate && rake db:seed && rake db:test:prepare'
+alias g="git status"
+alias gc="git commit"
 
 # General
-#alias ip='curl ifconfig.me'
 alias be='bundle exec'
 alias b='bundle install'
 
@@ -52,3 +45,4 @@ alias subl_packages='open ~/Library/Application\ Support/Sublime\ Text\ 3/Packag
 alias last_migration='ls db/migrate/* | tail -n1'
 
 #history | awk '{CMD[$2]++;count++;}END { for (a in CMD)print CMD[a] " " CMD[a]/count*100 "% " a;}' | grep -v "./" | column -c3 -s " " -t | sort -nr | nl |  head -n1
+
