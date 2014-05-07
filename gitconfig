@@ -2,6 +2,7 @@
 	ui = true
 [core]
 	editor = vim
+ excludesfile = /opt/boxen/config/git/gitignore
 
 [user]
 	email = emaxi.gonzalez@gmail.com
@@ -84,3 +85,9 @@ t = git tag
  
 [help]
 	autocorrect = 1
+
+[hub]
+protocol = https
+
+[credential]
+helper = /opt/boxen/bin/boxen-git-credential
