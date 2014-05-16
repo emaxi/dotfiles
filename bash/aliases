@@ -25,6 +25,11 @@ alias vi="mvim -v"
 #
 alias g="git status"
 alias gc="git commit"
+alias gr="git reset"
+alias grd="git reset diff"
+alias gl="git log"
+alias gaa="git add -A"
+alias ga="git add ."
 
 # General
 alias be='bundle exec'
