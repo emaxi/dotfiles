@@ -4,6 +4,7 @@ AllAutocomplete
 ApplySintax
 Backbone
 CaseConversion
+Clickable Urls
 Coffescript
 ColorPick
 Emmet
@@ -17,6 +18,9 @@ Sass
 Rspec
 ruby-slim.tmbundle
 SideBarEnhancements
+SublimeLinter
+SublimeLinter-jshint
+SublimeLinter-ruby
 SublimeREPL
 View
 TrailingSpaces

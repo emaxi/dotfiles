@@ -1,0 +1,32 @@
+{
+  "color_scheme": "Packages/User/Solarized (Light) (SL).tmTheme",
+  "create_window_at_startup": false,
+  "draw_white_space": "all",
+  "ensure_newline_at_eof_on_save": true,
+  "folder_exclude_patterns":
+  [
+    ".svn",
+    ".git",
+    ".hg",
+    "CVS",
+    ".sass-cache",
+    ".scssc",
+    "/tmp"
+  ],
+  "font_size": 12.0,
+  "ignored_packages":
+  [
+    "Vintage",
+    "AdvancedNewFile"
+  ],
+  "remember_open_files": false,
+  "rulers":
+  [
+    80
+  ],
+  "spell_check": true,
+  "sublimelinter": "save-only",
+  "tab_size": 2,
+  "translate_tabs_to_spaces": true,
+  "trim_trailing_white_space_on_save": true
+}
