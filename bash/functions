@@ -6,40 +6,23 @@ function my_ip {
 	ifconfig | grep 'broadcast' | awk '{print $6}'
 }
 
-get_git_branch_string() {
-	  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
+__git_ps1 ()
+{
+    local b="$(git symbolic-ref HEAD 2>/dev/null)";
+    if [ -n "$b" ]; then
+        printf "%s" "${b##refs/heads/}";
+    fi
 }
+
 pull() {
-	  git pull origin $(get_git_branch_string)
+	  git pull origin $(__git_ps1)
 }
 push() {
-	  git push origin $(get_git_branch_string)
-}
-
-alias compare="_compare"
-_compare() {
-  if [ -z "$1" ]
-    then
-    local with="staging"
-  else
-    local with="$1"
-  fi
-
-  open "https://github.com/goodpeople/europa_platform/compare/$with...$(get_git_branch_string)"
+	  git push origin $(__git_ps1)
 }
 
 function md() {
 	mkdir $1 && cd $1
-}
-
-get_git_branch_string() {
- git branch 2> /dev/null | sed -e '/^[^]/d' -e 's/ \(.*\)/\1/'
-}
-pull() {
- git pull origin $(get_git_branch_string)
-}
-push() {
- git push origin $(get_git_branch_string)
 }
 
 function extract {
