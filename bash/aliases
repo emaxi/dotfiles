@@ -30,6 +30,8 @@ alias grd="git reset diff"
 alias gl="git log"
 alias gaa="git add -A"
 alias ga="git add ."
+alias gdc="git diff"
+alias gdc="git diff --cached"
 
 # General
 alias be='bundle exec'
