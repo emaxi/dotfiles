@@ -32,6 +32,7 @@ alias gaa="git add -A"
 alias ga="git add ."
 alias gdc="git diff"
 alias gdc="git diff --cached"
+alias gco="git checkout"
 
 # General
 alias be='bundle exec'
