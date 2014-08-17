@@ -6,20 +6,24 @@ function my_ip {
 	ifconfig | grep 'broadcast' | awk '{print $6}'
 }
 
-
-get_git_branch_string() {
-	  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
+__git_ps1 ()
+{
+    local b="$(git symbolic-ref HEAD 2>/dev/null)";
+    if [ -n "$b" ]; then
+        printf "%s" "${b##refs/heads/}";
+    fi
 }
+
 pull() {
-	  git pull origin $(get_git_branch_string)
+	  git pull origin $(__git_ps1)
 }
 push() {
-	  git push origin $(get_git_branch_string)
+	  git push origin $(__git_ps1)
 }
 
 function md() {
 	mkdir $1 && cd $1
-} 
+}
 
 function extract {
  if [ -z "$1" ]; then
