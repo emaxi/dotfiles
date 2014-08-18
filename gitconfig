@@ -67,9 +67,14 @@
   pbo = pull --rebase origin
   ###############
   t = git tag
-
-  # URL
+  ###############
   url = "!f() { sha=$(git rev-parse ${1:-HEAD}); hub browse -u -- commit/$sha; }; f"
+  ############### HUB
+  commits = !hub browse -- commits
+  issues = !hub browse -- issues
+  wiki = !hub browse -- wiki
+  settings = !hub browse -- settings
+
 
   alias = "!sh -c '[ $# = 2 ] && git config --global alias.\"$1\" \"$2\" && exit 0 || echo \"usage: git alias <new alias> <original command>\" >&2 && exit 1' -"
   aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
@@ -90,7 +95,7 @@
   autocorrect = 1
 
 [hub]
-protocol = https
+  protocol = https
 
 [credential]
-helper = /opt/boxen/bin/boxen-git-credential
+  helper = /opt/boxen/bin/boxen-git-credential
