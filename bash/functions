@@ -58,5 +58,5 @@ fi
 }
 
 function gpull {
-  gco $1 && pull && cd engines/pioneer && gco $1 && cd ./../ && cd ./galileo && gco $1 && pull && cd ./../../
+  gco $1 && pull && cd engines/pioneer && git fetch && gco $1 && cd ./../ && cd ./galileo && git fetch && gco $1 && pull && cd ./../../
 }
