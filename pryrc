@@ -28,7 +28,7 @@ my_hook = Pry::Hooks.new.add_hook(:before_session, :add_dirs_to_load_path) do
   # adds the directories /spec and /test directories to the path if they exist and not already included
   dir = `pwd`.chomp
   dirs_added = []
-  %w(spec test).map{ |d| "#{dir}/#{d}" }.each do |p|
+  %w(spec test lib).map{ |d| "#{dir}/#{d}" }.each do |p|
     if File.exist?(p) && !$:.include?(p)
       $: << p
       dirs_added << p
