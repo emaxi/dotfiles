@@ -1,66 +1,83 @@
-[user]
-		name = Maximiliano Javier Gonzalez Levaggi
-		email = emaxi.gonzalez@gmail.com
-
+[color]
+  ui = true
 [core]
-		editor = vim
+  editor = vim
+  excludesfile = /opt/boxen/config/git/gitignore
+
+[user]
+  email = emaxi.gonzalez@gmail.com
+  name = Maxi Gonzalez
+
+[push]
+  default = matching
 
 [web]
-	browser = google-chrome
+  browser = google-chrome
 
 [alias]
   s = status
-	sb = status -s -b
-	#############
-	sa = stash apply
-	sc = stash clear
-	sd = stash drop
-	sl = stash list
-	sp = stash pop
-	ss = stash save
+  sb = status -sb
   #############
-	d = diff
-	dc = diff --cached
-	#############
-	c = commit
-	ca = commit -a
-	cm = commit -m
-	cam = commit -am
-	cd = commit --amend
-	cad = commit -a --amend
-	#############
-	l = log --oneline
-	#############
-	a = add .
-	patch = add --patch
-	#############
+  sa = stash apply
+  sc = stash clear
+  sd = stash drop
+  sl = stash list
+  sp = stash pop
+  ss = stash save
+  #############
+  d = diff
+  dc = diff --cached
+  #############
+  c = commit
+  ca = commit -a
+  call = commit -A
+  cm = commit -m
+  cam = commit -am
+  cd = commit --amend
+  cad = commit -a --amend
+  #############
+  l = log --oneline
+  #############
+  a = add .
+  patch = add --patch
+  #############
   co = checkout
-	cob = checkout -b
-	#############
-	l = log --oneline
+  cob = checkout -b
+  #############
+  l = log --oneline
   lg = log -p
-	lgn = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-	#############
-	b = branch
-	ba = branch -a
-	bd = branch -d
-	br = branch -r
-	#############
-	f = fetch
-	fo = fetch origin
-	#############
-	m = merge
-	#############
-	ps = push
-	pso = push origin
-	#############
-	pl = pull
-	plo = pull origin
-	pb = pull --rebase
-	pbo = pull --rebase origin
+  lgn = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  #############
+  b = branch
+  ba = branch -a
+  bd = branch -d
+  br = branch -r
+  #############
+  f = fetch
+  fo = fetch origin
+  #############
+  m = merge
+  #############
+  ps = push
+  pso = push origin
+  #############
+  pl = pull
+  plo = pull origin
+  pb = pull --rebase
+  pbo = pull --rebase origin
+  ###############
+  t = git tag
+  ###############
+  url = "!f() { sha=$(git rev-parse ${1:-HEAD}); hub browse -u -- commit/$sha; }; f"
+  ############### HUB
+  commits = !hub browse -- commits
+  issues = !hub browse -- issues
+  wiki = !hub browse -- wiki
+  settings = !hub browse -- settings
 
-	alias = "!sh -c '[ $# = 2 ] && git config --global alias.\"$1\" \"$2\" && exit 0 || echo \"usage: git alias <new alias> <original command>\" >&2 && exit 1' -"
-	aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
+
+  alias = "!sh -c '[ $# = 2 ] && git config --global alias.\"$1\" \"$2\" && exit 0 || echo \"usage: git alias <new alias> <original command>\" >&2 && exit 1' -"
+  aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
 
   searchcommits = "!f() { query=\"$1\"; shift; git log -S\"$query\" \"$@\"; }; f \"$@\""
   # Search for a given string in all patches and print commit messages
@@ -71,8 +88,14 @@
   # example: search commits for "foobar", print full diff of commit with 1 line context
   #     git searchcommits foobar --pickaxe-all -U1 src/lib
 
-	sha1 = !sh -c 'git rev-parse ${1-`echo HEAD`}' -
-	# sha1 of the current branch's HEAD
- 
-[color]
-	ui = true
+  sha1 = !sh -c 'git rev-parse ${1-`echo HEAD`}' -
+  # sha1 of the current branch's HEAD
+
+[help]
+  autocorrect = 1
+
+[hub]
+  protocol = https
+
+[credential]
+  helper = /opt/boxen/bin/boxen-git-credential
