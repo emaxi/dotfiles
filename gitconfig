@@ -99,3 +99,5 @@
 
 [credential]
   helper = /opt/boxen/bin/boxen-git-credential
+[github]
+	user = emaxi
