@@ -50,3 +50,13 @@ puts
 puts "Samples variables"
 puts "a_array  :  [1, 2, 3, 4, 5, 6]"
 puts "a_hash   :  { hello: \"world\", free: \"of charge\" }"
+
+def pbcopy(input)
+  str = input.to_s
+  IO.popen('pbcopy', 'w') { |f| f << str }
+  str
+end
+
+def pbpaste
+  `pbpaste`
+end
