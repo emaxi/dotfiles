@@ -1,0 +1,10 @@
+--ignore-dir=is:log
+--ignore-dir=is:tmp
+--ignore-dir=is:.vagrant
+--ignore-dir=is:.kitchen
+--ignore-dir=is:.bundle
+--ignore-dir=is:vendor
+--ignore-dir=is:spec/samples/vcr
+--type-add=haml:ext:haml,hamlc,rake,rabl,slim
+--ignore-file=ext:tmproj,tm_build_errors
+--ignore-file=ext:svg
