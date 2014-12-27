@@ -60,3 +60,9 @@ end
 def pbpaste
   `pbpaste`
 end
+
+if defined?(Rails)
+  if Rails.env.production?
+    Pry.config.prompt = [proc { "\e[41m#{Rails.env}\e[0m > " }, proc { (" " * Rails.env.length) + " | " }]
+  end
+end
