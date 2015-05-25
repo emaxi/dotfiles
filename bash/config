@@ -1,3 +1,5 @@
+export EDITOR="subl -w"
+
 # Parse git for clean dir
 function parse_git_dirty {
 [[ "$(git status 2> /dev/null | tail -n1)" != "nothing to commit (working directory clean)" ]] && echo "*"
@@ -24,6 +26,8 @@ shopt -s histappend
 #Make shells write to history immediately.
 #Normally they write only on exit.
 export PROMPT_COMMAND='history -a'
+
+HISTCONTROL=ignoredups:ignorespace
 
 #Set up text editing/viewing.
 export LANG=en_US.utf-8

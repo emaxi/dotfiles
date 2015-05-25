@@ -1,6 +1,5 @@
 [ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
 
-. ~/bin/dotfiles/bash/env
 . ~/bin/dotfiles/bash/config
 . ~/bin/dotfiles/bash/aliases
 . ~/bin/dotfiles/bash/colors
