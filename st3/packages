@@ -2,7 +2,7 @@ AdvancedNewFile
 Advanced CSV
 Alignment
 AllAutocomplete
-ApplySyntax
+ApplySyntax -> Helps Colorcoder
 Backbone
 BracketHighlighter
 CaseConversion
@@ -21,6 +21,7 @@ Git Gutter
 GitHub Tools
 Haml
 Html Mustache
+JavaScript Next
 jQuery
 Less
 Origami
