@@ -1,6 +1,7 @@
 AdvancedNewFile
 Advanced CSV
 Alignment
+AlignTab
 AllAutocomplete
 ApplySyntax -> Helps Colorcoder
 Backbone
@@ -16,6 +17,7 @@ Color Highlighter
 CTags
 Dayle Rees Color Schemes
 Emmet
+ERB Snippets
 Gist
 Git Gutter
 GitHub Tools
@@ -25,10 +27,11 @@ JavaScript Next
 jQuery
 Less
 Origami
-Sass
+Pretty JSON
 Rspec
 ruby-slim.tmbundle
 Ruby Hash Converter
+Sass
 SublimeLinter-contrib-scss-lint
 SideBarEnhancements
 SublimeLinter
