@@ -13,7 +13,7 @@ git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse
 if [[ ${EUID} == 0 ]] ; then
   PS1='\[\033[01;31m\]\u@\h \[\033[01;34m\]\w\[\033[01;35m\]$(parse_git_branch)\[\033[01;34m\] \$ \[\033[00m\]'
 else
-  PS1='\[\e[0;32m\][\D{%Y-%m-%d} \A] \[\e[m\]\[\e[1;38;05;032m\]\w\[\e[m\]\[\e[0;38;05;011m\] $(parse_git_branch)\[\e[m\]\n \[\e[1;31;05;15m\]→\[\e[m\] '
+  PS1='\[\e[0;32m\][\D{%Y-%m-%d} \A] \[\e[m\]\[\e[1;38;05;032m\]\w\[\e[m\]\[\e[0;38;05;011m\] $(parse_git_branch)\[\e[m\]\n \[\e[1;31;15m\]→\[\e[m\] '
 fi
 
 export HISTFILESIZE=10000
