@@ -4,10 +4,6 @@
   editor = vim
   excludesfile = /opt/boxen/config/git/gitignore
 
-[user]
-  email = emaxi.gonzalez@gmail.com
-  name = maxi gonzalez
-
 [push]
   default = matching
 
@@ -97,7 +93,5 @@
 [hub]
   protocol = https
 
-[credential]
-  helper = /opt/boxen/bin/boxen-git-credential
-[github]
-	user = emaxi
+[include]
+  path = ~/.gitconfig.local
