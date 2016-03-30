@@ -73,6 +73,9 @@
   wiki = !hub browse -- wiki
   settings = !hub browse -- settings
 
+  unwip = !test "`git log -n1 --pretty=format:%s`" = "wip" && git reset HEAD~1
+  wip = !git add -A && git commit -m "wip"
+
 
   alias = "!sh -c '[ $# = 2 ] && git config --global alias.\"$1\" \"$2\" && exit 0 || echo \"usage: git alias <new alias> <original command>\" >&2 && exit 1' -"
   aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
