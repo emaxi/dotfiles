@@ -1,0 +1,42 @@
+alias ez='vim ~/.zshrc'
+alias sz='source ~/.zshrc'
+alias c='clear'
+alias ..='cd ..'
+alias cdd="cd -"
+
+alias l='ls -lsak'
+alias la='ls -la'
+alias l='ls -l'
+alias la='ls -lisa'
+
+alias g="git status"
+alias gc="git commit"
+alias gr="git reset"
+alias grd="git reset diff"
+alias gl="git log"
+alias gaa="git add -A"
+alias ga="git add ."
+alias gdc="git diff"
+alias gdc="git diff --cached"
+alias gco="git checkout"
+alias gb="git branch"
+
+alias b="bundle install"
+alias be='bundle exec'
+
+# Pretty print the path
+alias path='echo $PATH | tr -s ":" "\n"'
+
+alias goodbye="osascript -e 'tell application \"System Events\"' -e 'shut down' -e 'end tell'"
+alias getmyip='dig +short myip.opendns.com @resolver1.opendns.com'
+alias safari='/Applications/Safari.app/Contents/MacOS/Safari https://mail.google.com/mail/'
+alias speedtest='wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip'
+alias subl_packages='open ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/'
+alias last_migration='ls db/migrate/* | tail -n1'
+
+#System
+alias tc='top -o cpu'
+alias tm='top -o vsize'
+
+# Include custom aliases
+[[ -f ~/.aliases.local ]] && source ~/.aliases.local

@@ -82,24 +82,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias ez='vim ~/.zshrc'
-alias sz='source ~/.zshrc'
-alias c='clear'
-alias ..='cd ..'
-
-alias g="git status"
-alias gc="git commit"
-alias gr="git reset"
-alias grd="git reset diff"
-alias gl="git log"
-alias gaa="git add -A"
-alias ga="git add ."
-alias gdc="git diff"
-alias gdc="git diff --cached"
-alias gco="git checkout"
-alias gb="git branch"
-
-alias b="bundle install"
+# # aliases
+[[ -f ~/.aliases ]] && source ~/.aliases
 
 #
 # Functions
@@ -134,6 +118,10 @@ function envup {
 
 copy-last-command() {
   history | tail -1 | cut -c 8- | pbcopy
+}
+
+most-often-cmds-used() {
+  history | awk '{CMD[$2]++;count++;}END { for (a in CMD)print CMD[a] " " CMD[a]/count*100 "% " a;}' | grep -v "./" | column -c3 -s " " -t | sort -nr | nl |  head -n25
 }
 
 export DISABLE_AUTO_UPDATE="true" # Don't let oh-my-zsh auto update
