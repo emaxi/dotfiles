@@ -1,2 +1,2 @@
 EXCLUDES="README bash bin code osx st3 tools "
-DOTFILES_DIRS="$HOME/dotfiles-local $HOME/dotfiles"
+DOTFILES_DIRS="$HOME/.dotfiles-local $HOME/.dotfiles"
