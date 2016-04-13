@@ -1,5 +1,6 @@
 alias ez='vim ~/.zshrc'
 alias sz='source ~/.zshrc'
+alias v='vi'
 alias c='clear'
 alias ..='cd ..'
 alias cdd="cd -"
