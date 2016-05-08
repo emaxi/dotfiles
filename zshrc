@@ -49,7 +49,7 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(brew bundler common-aliases compleat extract gem git git-flow osx rake ruby web-search zsh-syntax-highlighting z zeus)
+plugins=(brew bundler common-aliases compleat extract gem git git-flow osx rake ruby web-search zsh-syntax-highlighting z zeus aws)
 
 # User configuration
 
@@ -126,3 +126,9 @@ most-often-cmds-used() {
 
 export DISABLE_AUTO_UPDATE="true" # Don't let oh-my-zsh auto update
 
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
+
+eval "$(docker-machine env default)"

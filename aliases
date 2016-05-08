@@ -4,6 +4,7 @@ alias v='vi'
 alias c='clear'
 alias ..='cd ..'
 alias cdd="cd -"
+alias comp="docker-compose"
 
 alias l='ls -lsak'
 alias la='ls -la'
