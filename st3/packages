@@ -1,48 +1,69 @@
-AdvancedNewFile
 Advanced CSV
+AdvancedNewFile
 Alignment
 AlignTab
-AllAutocomplete
-ApplySyntax -> Helps Colorcoder
+All Autocomplete
+Autoprefixer
 Backbone
+BeautifyRuby
+Better CoffeScript
+Better Completion
 BracketHighlighter
-CaseConversion
+Can I Use
+caniuse_local
+Case Conversion
 ChangeQuotes
-Clickable Urls
-Cobalt2
-Coffescript
-Colorcoder
-ColorPick
+Clickable URLs
 Color Highlighter
+Cobalt2 Flat Theme
+CoffeescriptHaml
+Colorcoder
+ColorHelper
+ColorPick
+ColorSchemeSelector
+CSS Extended Completions
+CSScomb
 CTags
 Dayle Rees Color Schemes
 Dotfiles Syntax Highlighting
 Emmet
 ERB Snippets
+FileDiffs
 Gist
-Git Gutter
+GitGutter
 GitHub Tools
-Local History
 Haml
-Html Mustache
-JavaScript Next
+HTML Mustache
+JavaScriptNext - ES6 Syntax
 jQuery
-Less
+LESS
+LocalHistory
 MarkdownEditing
+MoveTab
 Origami
+PackageControl
 Pretty JSON
-Rspec
-ruby-slim.tmbundle
+ReactJS
+RSpec
+RuboCop
+Ruby Slim
 Ruby Hash Converter
 Sass
-SublimeLinter-contrib-scss-lint
+SCSS
 SideBarEnhancements
+Sublime Tutor
 SublimeLinter
+SublimeLinter-contrib-scss-lint
 SublimeLinter-jshint
+SublimeLinter-json
+SublimeLinter-rubocop
 SublimeLinter-ruby
 SublimeREPL
 TabsExtra
-View
+Terraform
+Text Pastry
 TrailingSpaces
+Trimmer
+View
 
 https://github.com/wbond/sublime_package_control/wiki/Sublime-Text-3-Compatible-Packages
