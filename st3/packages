@@ -8,6 +8,7 @@ Backbone
 BeautifyRuby
 Better CoffeScript
 Better Completion
+Blame​Highlighter
 BracketHighlighter
 Can I Use
 caniuse_local
@@ -30,6 +31,7 @@ Emmet
 ERB Snippets
 FileDiffs
 Gist
+Git
 GitGutter
 GitHub Tools
 Haml
