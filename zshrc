@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/maxi/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -53,7 +53,7 @@ plugins=(brew bundler common-aliases compleat extract gem git git-flow osx rake 
 
 # User configuration
 
-export PATH="/usr/local/bin:/Users/maxi/.rbenv/shims:/Users/maxi/bin:/usr/local/heroku/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
+export PATH="/usr/local/bin:/Users/maximiliano/.rbenv/shims:/Users/maximiliano/bin:/usr/local/heroku/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -130,5 +130,5 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
+eval "$(rbenv init -)"
 
-eval "$(docker-machine env default)"
