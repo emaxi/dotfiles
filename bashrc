@@ -8,3 +8,5 @@
 . ~/.dotfiles/git/git-completion.bash
 
 [[ -f ~/.aliases ]] && source ~/.aliases
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
