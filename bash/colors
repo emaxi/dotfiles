@@ -9,7 +9,7 @@ export CLICOLOR=1
 
 
 # Tell grep to highlight matches
-export GREP_OPTIONS='--color=auto'
+alias grep="grep --color=auto"
 
 # @gf3’s Sexy Bash Prompt, inspired by “Extravagant Zsh Prompt”
 # Shamelessly copied from https://github.com/gf3/dotfiles
