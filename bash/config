@@ -37,4 +37,5 @@ export VISUAL=$EDITOR
 export PAGER=less
 
 # Allow <C-s> to pass through to shell and programs
-stty -ixon -ixoff
+[[ $- == *i* ]] && stty -ixon -ixoff
+
