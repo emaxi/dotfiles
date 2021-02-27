@@ -132,3 +132,5 @@ export LANG=en_US.UTF-8
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 eval "$(rbenv init -)"
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
