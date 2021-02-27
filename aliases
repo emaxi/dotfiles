@@ -22,6 +22,7 @@ alias gdc="git diff"
 alias gdc="git diff --cached"
 alias gco="git checkout"
 alias gb="git branch"
+alias gls="git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
 
 alias b="bundle install"
 alias be='bundle exec'
