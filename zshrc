@@ -49,7 +49,7 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(brew bundler common-aliases compleat extract gem git git-flow osx rake ruby web-search zsh-syntax-highlighting z zeus aws)
+plugins=(brew bundler common-aliases compleat extract gem git git-flow osx rake ruby web-search zsh-syntax-highlighting z zeus aws zsh-autosuggestions)
 
 # User configuration
 
