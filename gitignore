@@ -11,4 +11,4 @@ tags
 tmp/**/*
 !tmp/cache/.keep
 *.pyc
-
+.history/
